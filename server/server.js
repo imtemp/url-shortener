@@ -22,13 +22,18 @@ mongoose
     console.log("Connected to DB");
   })
   .catch((err) => {
+    ç;
     console.log(err);
   });
 
 //Schema
 const ShortUrl = require("./models/shortUrl");
 
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://url-shortener-fawn-iota.vercel.app",
+  })
+);
 app.use(bodyParser.json());
 //Endpoints
 app.get("/:shortid", async (req, res) => {
@@ -77,7 +82,5 @@ app.post("/shortenUrl", async (req, res) => {
     res.status(500).json({ error: "Failed to shorten URL" });
   }
 });
-
-// ... (remaining code)
 
 app.listen(process.env.PORT || 2000);
