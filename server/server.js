@@ -37,6 +37,11 @@ app.use(
 );
 app.use(bodyParser.json());
 //Endpoints
+
+app.get("/check", (req, res) => {
+  res.send("123");
+});
+
 app.get("/:shortid", async (req, res) => {
   try {
     const urlMapping = await ShortUrl.findOne({ short: req.params.shortid });
