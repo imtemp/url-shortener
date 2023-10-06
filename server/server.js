@@ -32,6 +32,7 @@ const ShortUrl = require("./models/shortUrl");
 app.use(
   cors({
     origin: "https://url-shortener-fawn-iota.vercel.app",
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
   })
 );
 app.use(bodyParser.json());
