@@ -7,7 +7,7 @@ function App() {
   const [shortenedURL, setShortenedURL] = useState("");
   const [error, setError] = useState("");
   const [shortenedURLs, setShortenedURLs] = useState([]); // Store all shortened URLs as objectsde
-  const BACKEND_URL = "https://url-shortener-fawn-iota.vercel.app/";
+  const BACKEND_URL = "https://url-shortener-fawn-iota.vercel.app/api";
 
   useEffect(() => {
     const storedShortenedURLs = JSON.parse(
