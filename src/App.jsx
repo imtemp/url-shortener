@@ -6,8 +6,8 @@ function App() {
   const [customShortID, setCustomShortID] = useState("");
   const [shortenedURL, setShortenedURL] = useState("");
   const [error, setError] = useState("");
-  const [shortenedURLs, setShortenedURLs] = useState([]); // Store all shortened URLs as objects
-  const BACKEND_URL = "http://localhost:2000";
+  const [shortenedURLs, setShortenedURLs] = useState([]); // Store all shortened URLs as objectsde
+  const BACKEND_URL = "https://url-shortener-fawn-iota.vercel.app/";
 
   useEffect(() => {
     const storedShortenedURLs = JSON.parse(
